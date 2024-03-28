@@ -36,7 +36,7 @@ const ShopState = props => {
     const searchShops = async (text) => {
         setLoading()
     
-        const res = await axios.get(`/api/shops`)
+        const res = await axios.get(`https://backend-pickkshop-b9ea88f25e01.herokuapp.com/api/shops`)
     
        dispatch({
         type: SEARCH_SHOPS,
@@ -47,7 +47,7 @@ const ShopState = props => {
     const getShop = async(shop) => {
         setLoading()
   
-        const res =  await axios.get(`/api/shops/${id}`) 
+        const res =  await axios.get(`https://backend-pickkshop-b9ea88f25e01.herokuapp.com/api/shops/${id}`) 
      
         dispatch({
             type: GET_SHOP,
@@ -69,7 +69,7 @@ const ShopState = props => {
       }
 
       try {
-        const res = await axios.post('/api/shops', shop, config);
+        const res = await axios.post('https://backend-pickkshop-b9ea88f25e01.herokuapp.com/api/shops', shop, config);
 
         dispatch({ type: ADD_SHOP,
                    payload: res.data });
@@ -85,7 +85,7 @@ const ShopState = props => {
    // Delete SHOP
    const deleteShop = async id => {
      try {
-       await axios.delete(`/api/shops/${id}`);
+       await axios.delete(`https://backend-pickkshop-b9ea88f25e01.herokuapp.com/api/shops/${id}`);
 
        dispatch({ 
          type: DELETE_SHOP,
@@ -107,7 +107,7 @@ const ShopState = props => {
      }
 
      try {
-     const res = await axios.put(`/api/shops/${shop._id}`, shop, config);
+     const res = await axios.put(`https://backend-pickkshop-b9ea88f25e01.herokuapp.com/api/shops/${shop._id}`, shop, config);
 
      dispatch({ 
                 type: UPDATE_SHOP,

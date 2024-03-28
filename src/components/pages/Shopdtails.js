@@ -14,7 +14,7 @@ const UserComponent = (match) => {
 
       try {
        // const response = await fetch(`/api/shops/${id}`);
-          await axios.get(`/api/shops/${id}`)
+          await axios.get(`https://backend-pickkshop-b9ea88f25e01.herokuapp.com/api/shops/${id}`)
           .then((data) => {
         //console.log(data.data.data.shop)
         setUsers(data.data.data.shop)
