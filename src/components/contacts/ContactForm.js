@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import AlertContext from '../../context/alert/alertContext';
-import axios from 'axios';
+//import axios from 'axios';
 import {
   addContact,
   useContacts,
@@ -34,7 +34,7 @@ const ContactForm = () => {
     }
   }, [current]);
 
-  const { name, email, phone, summary, address, imageCover, type } = contact; // imageCover,
+  const { name, email, phone, summary, address, type } = contact; // imageCover,
 
   const onChange = (e) =>
     setContact({ ...contact, [e.target.name]: e.target.value });

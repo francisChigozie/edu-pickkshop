@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useContacts, getShops } from '../../context/contact/ContactState';
+import { useContacts } from '../../context/contact/ContactState';
 import { Link } from 'react-router-dom'
 
 const SearchComponent = () => {
