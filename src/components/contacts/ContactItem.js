@@ -13,7 +13,7 @@ const ContactItem = ({ contact }) => {
   const { _id, name, email, phone, imageCover, summary, type } = contact;
 
   const handleDeleteUser = async () => {
-      await axios.delete(`/api/auth/${_id}`);
+      await axios.delete(`https://backend-pickkshop-b9ea88f25e01.herokuapp.com/api/auth/${_id}`);
       window.location.reload();
   };
 
@@ -47,7 +47,7 @@ const ContactItem = ({ contact }) => {
             return{...prevState, started: true}
           }) */
       // Send the image file to the server using fetch or any HTTP client library
-      axios.patch(`/api/shops/${_id}/image`, fd, {
+      axios.patch(`https://backend-pickkshop-b9ea88f25e01.herokuapp.com/api/shops/${_id}/image`, fd, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
