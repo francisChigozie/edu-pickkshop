@@ -48,7 +48,7 @@ export const getContacts = async (dispatch) => {
 // Get Shops
 export const getShops = async (dispatch) => {
   try {
-    const res = await axios.get('/api/shops');
+    const res = await axios.get('https://backend-pickkshop-b9ea88f25e01.herokuapp.com/api/shops');
 
     dispatch({
       type: GET_SHOPS,
