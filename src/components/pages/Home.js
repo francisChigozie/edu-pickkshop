@@ -26,10 +26,13 @@ const Shops = () => {
       {contacts.map((shop) => (
           <div className='card text-center' key={shop._id}>
                <h3>{shop.name}</h3>
-                  <img
+               <Link to={`/shop/${shop._id}`} 
+                  >
+                     <img
                   src={`img/${shop.imageCover}`}  alt='item cover'
                   className='round-img'
                   style={{width: '200px'}}/>
+                </Link>  
                <h3>{shop.summary}</h3>
              <div>
                 <Link to={`/shop/${shop._id}`} 
